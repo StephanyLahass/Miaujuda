@@ -22,9 +22,6 @@
             android:name=".activities.CadastrarPetPerdidoActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.CadastrarPetEncontradoActivity"
-            android:exported="false" />
-        <activity
             android:name=".activities.CadastrarPetActivity"
             android:exported="false" />
         <activity
