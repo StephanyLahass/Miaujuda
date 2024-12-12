@@ -2,9 +2,128 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_gradiente"
     tools:context=".activities.LoginActivity">
 
+    <!-- Container branco -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/bg_container_branco"
+        android:orientation="vertical"
+        android:padding="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.85">
+
+
+        <!-- Bem-vindo de volta -->
+        <TextView
+            android:id="@+id/tvBemVindoLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="BEM-VINDO DE VOLTA!"
+            android:textAlignment="center"
+            android:textColor="#9f4903"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_logo_redonda"
+            android:contentDescription="Logo"
+            android:src="@drawable/logomiaujuda" />
+
+        <!-- Login Text -->
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="LOGIN"
+            android:textColor="#9f4903"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Campo de Nome -->
+        <EditText
+            android:id="@+id/etNomeUserLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Nome" />
+
+        <!-- Campo de Senha -->
+        <EditText
+            android:id="@+id/etSenhaLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Senha"
+            android:inputType="textPassword" />
+
+        <!-- Esqueci minha senha -->
+        <TextView
+            android:id="@+id/tvEsqueci"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="clip_horizontal"
+            android:layout_marginBottom="16dp"
+            android:text="Esqueci minha senha"
+            android:textColor="#9f4903"
+            android:textSize="14sp" />
+
+        <!-- Botão de Login -->
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#ff8e30"
+            android:text="LOGIN"
+            android:textColor="@android:color/white" />
+
+        <!-- Texto novo na plataforma -->
+        <TextView
+            android:id="@+id/tvNovato"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="É novo na plataforma?"
+            android:textColor="#9f4903" />
+
+        <!-- Botão de Cadastro -->
+        <Button
+            android:id="@+id/btnCadastrarPetP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_bt_transparente"
+            android:backgroundTint="@color/white"
+            android:text="CADASTRAR"
+            android:textColor="#ff8e30" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
