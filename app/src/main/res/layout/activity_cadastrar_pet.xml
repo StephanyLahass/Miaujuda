@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_gradiente"
     tools:context=".activities.CadastrarPetActivity">
 
     <ScrollView
@@ -22,28 +23,33 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:background="@drawable/bg_container_branco"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/tv3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="15dp"
                 android:layout_marginBottom="5dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:gravity="center"
                 android:text="CADASTRO DE PET PARA ADOÇÃO"
+                android:textColor="#9f4903"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <View
-                android:id="@+id/view"
-                android:layout_width="match_parent"
+                android:id="@+id/view2"
+                android:layout_width="294dp"
                 android:layout_height="2dp"
-                android:layout_marginBottom="10dp"
-                android:background="#000000" />
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="29dp"
+                android:background="#6A333333" />
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -61,6 +67,7 @@
                 android:layout_marginLeft="75dp"
                 android:layout_marginRight="75dp"
                 android:layout_marginBottom="10dp"
+                android:backgroundTint="#ff8e30"
                 android:text="SELECIONAR IMAGEM" />
 
             <EditText
@@ -69,6 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
+                android:background="@drawable/bg_edit_text"
                 android:ems="10"
                 android:hint="Nome do Animal"
                 android:inputType="text" />
@@ -105,6 +113,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"
+                android:background="@drawable/bg_edit_text"
                 android:ems="10"
                 android:hint="Tipo do Animal"
                 android:inputType="text" />
@@ -116,6 +125,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"
+                android:background="@drawable/bg_edit_text"
                 android:ems="10"
                 android:hint="Peso do Animal (kg)"
                 android:inputType="numberDecimal" />
@@ -127,6 +137,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"
+                android:background="@drawable/bg_edit_text"
                 android:ems="10"
                 android:hint="Tamanho do Animal (cm)"
                 android:inputType="number" />
@@ -138,6 +149,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"
+                android:background="@drawable/bg_edit_text"
                 android:ems="10"
                 android:hint="Raça do Animal"
                 android:inputType="text" />
@@ -149,6 +161,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="5dp"
+                android:background="@drawable/bg_edit_text"
                 android:ems="10"
                 android:gravity="start|top"
                 android:hint="Descrição do Animal"
@@ -162,6 +175,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="60dp"
                 android:layout_marginBottom="10dp"
+                android:backgroundTint="#ff8e30"
                 android:text="CADASTRAR" />
 
         </LinearLayout>

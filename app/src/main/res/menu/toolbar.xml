@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:icon="@android:drawable/ic_menu_myplaces"
+        android:icon="@drawable/usericon"
         android:title="Perfil"
         app:showAsAction="ifRoom" />
 </menu>
