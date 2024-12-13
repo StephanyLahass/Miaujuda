@@ -1,6 +1,8 @@
 package lahass.stephany.miaujuda.activities;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,4 +25,14 @@ public class HomeActivity extends AppCompatActivity {
             return insets;
         });
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.bottom_nav_menu, menu);
+        inflater.inflate(R.menu.toolbar, menu);
+        return true;
+    }
+
 }
