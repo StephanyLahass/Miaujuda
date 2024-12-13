@@ -4,11 +4,14 @@
 
     <item
         android:icon="@android:drawable/ic_menu_gallery"
-        android:title="Home" />
+        android:title="Home"
+        app:showAsAction="ifRoom" />
     <item
         android:icon="@android:drawable/ic_menu_gallery"
-        android:title="Ajude" />
+        android:title="Ajude"
+        app:showAsAction="ifRoom" />
     <item
         android:icon="@android:drawable/ic_menu_gallery"
-        android:title="Meus Pets" />
+        android:title="Meus Pets"
+        app:showAsAction="ifRoom" />
 </menu>
