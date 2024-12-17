@@ -10,7 +10,7 @@
 
     <ScrollView
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
@@ -43,19 +43,18 @@
 
             <View
                 android:id="@+id/view2"
-                android:layout_width="match_parent"
+                android:layout_width="294dp"
                 android:layout_height="2dp"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="29dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:layout_marginEnd="29dp"
                 android:background="#6A333333" />
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:layout_marginLeft="60dp"
                 android:layout_marginRight="60dp"
                 android:layout_marginBottom="10dp"
@@ -63,21 +62,13 @@
 
             <Button
                 android:id="@+id/btnSimg_cadAnAd"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="80dp"
-                android:layout_marginRight="80dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="75dp"
+                android:layout_marginRight="75dp"
                 android:layout_marginBottom="10dp"
                 android:backgroundTint="#ff8e30"
-                android:fontFamily="@font/montserrat_bold"
-                android:gravity="center"
-                android:paddingLeft="10dp"
-                android:paddingTop="3dp"
-                android:paddingRight="10dp"
-                android:paddingBottom="3dp"
-                android:text="SELECIONAR IMAGEM"
-                android:textSize="12sp" />
+                android:text="SELECIONAR IMAGEM" />
 
             <EditText
                 android:id="@+id/etNome_cadAnAd"
@@ -87,10 +78,8 @@
                 android:layout_marginRight="20dp"
                 android:background="@drawable/bg_edit_text"
                 android:ems="10"
-                android:fontFamily="@font/montserrat"
                 android:hint="Nome do Animal"
-                android:inputType="text"
-                android:textSize="16sp" />
+                android:inputType="text" />
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -107,14 +96,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    android:fontFamily="@font/montserrat"
                     android:text="Macho" />
 
                 <RadioButton
                     android:id="@+id/rbF_cadAnAd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
                     android:text="Fêmea" />
 
             </RadioGroup>
@@ -125,13 +112,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="5dp"
                 android:background="@drawable/bg_edit_text"
                 android:ems="10"
-                android:fontFamily="@font/montserrat"
                 android:hint="Tipo do Animal"
-                android:inputType="text"
-                android:textSize="16sp" />
+                android:inputType="text" />
 
             <EditText
                 android:id="@+id/etP_cadAdAn"
@@ -139,13 +124,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="5dp"
                 android:background="@drawable/bg_edit_text"
                 android:ems="10"
-                android:fontFamily="@font/montserrat"
                 android:hint="Peso do Animal (kg)"
-                android:inputType="numberDecimal"
-                android:textSize="16sp" />
+                android:inputType="numberDecimal" />
 
             <EditText
                 android:id="@+id/etTam_cadAnAd"
@@ -153,13 +136,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="5dp"
                 android:background="@drawable/bg_edit_text"
                 android:ems="10"
-                android:fontFamily="@font/montserrat"
                 android:hint="Tamanho do Animal (cm)"
-                android:inputType="number"
-                android:textSize="16sp" />
+                android:inputType="number" />
 
             <EditText
                 android:id="@+id/etRaca_cadAnAd"
@@ -167,13 +148,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginBottom="5dp"
                 android:background="@drawable/bg_edit_text"
                 android:ems="10"
-                android:fontFamily="@font/montserrat"
                 android:hint="Raça do Animal"
-                android:inputType="text"
-                android:textSize="16sp" />
+                android:inputType="text" />
 
             <EditText
                 android:id="@+id/etDesc_cadAnAd"
@@ -184,25 +163,20 @@
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/bg_edit_text"
                 android:ems="10"
-                android:fontFamily="@font/montserrat"
                 android:gravity="start|top"
                 android:hint="Descrição do Animal"
-                android:inputType="textMultiLine"
-                android:textSize="16sp" />
+                android:inputType="textMultiLine" />
 
             <Button
                 android:id="@+id/btn_cadAnAd"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:layout_marginLeft="60dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="60dp"
                 android:layout_marginBottom="10dp"
                 android:backgroundTint="#ff8e30"
-                android:fontFamily="@font/montserrat_bold"
-                android:text="CADASTRAR"
-                android:textSize="20sp" />
+                android:text="CADASTRAR" />
 
         </LinearLayout>
     </ScrollView>

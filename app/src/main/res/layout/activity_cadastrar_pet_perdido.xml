@@ -50,16 +50,16 @@
                 android:id="@+id/btnCachorro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#ff8e30"
+                android:background="@drawable/bg_bt_transparente"
                 android:text="CACHORRO"
-                android:textColor="@android:color/white" />
+                android:textColor="@color/laranja" />
 
             <Button
                 android:id="@+id/btnGato"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:backgroundTint="#ff8e30"
+                android:background="@drawable/bg_bt_laranja"
                 android:text="GATO"
                 android:textColor="@android:color/white" />
         </LinearLayout>
@@ -80,9 +80,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="8dp"
             android:background="@drawable/bg_bt_transparente"
-            android:backgroundTint="#ff8e30"
-            android:text="SELECIONAR IMAGEM"
-            android:textColor="@android:color/white" />
+            android:text="SELECIONAR IMAGEM" />
 
         <!-- Campos de Texto -->
         <EditText
@@ -128,9 +126,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
-            android:backgroundTint="#ff8e30"
-            android:text="CADASTRAR"
-            android:textColor="@android:color/white" />
+            android:background="@drawable/bg_bt_laranja"
+            android:textColor="@color/white"
+            android:text="CADASTRAR" />
 
     </LinearLayout>
 
