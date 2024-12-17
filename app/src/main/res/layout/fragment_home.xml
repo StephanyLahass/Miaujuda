@@ -15,11 +15,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
             android:fontFamily="@font/montserrat_bold"
             android:gravity="center"
             android:text="ADOTE UM ANIMAL"
-            android:textSize="24sp" />
+            android:textColor="#9f4903"
+            android:textSize="20sp" />
 
         <View
             android:id="@+id/view"
@@ -27,7 +30,8 @@
             android:layout_height="2dp"
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
-            android:background="#000000" />
+            android:layout_marginBottom="5dp"
+            android:background="#6A333333" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvHome"

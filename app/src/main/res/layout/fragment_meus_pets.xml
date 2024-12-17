@@ -16,8 +16,10 @@
             android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
             android:fontFamily="@font/montserrat_bold"
             android:gravity="center"
             android:text="PETS CADASTRADOS PELO USUÁRIO"
@@ -28,14 +30,12 @@
 
         <View
             android:id="@+id/view3"
-            android:layout_width="294dp"
+            android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:layout_marginStart="50dp"
-            android:layout_marginEnd="29dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="5dp"
             android:background="#6A333333" />
-
 
 
         <androidx.recyclerview.widget.RecyclerView
