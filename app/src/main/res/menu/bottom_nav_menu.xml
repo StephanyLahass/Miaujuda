@@ -3,14 +3,17 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/home"
         android:icon="@drawable/homeicon"
         android:title="Home"
         app:showAsAction="ifRoom" />
     <item
+        android:id="@+id/ajude"
         android:icon="@drawable/ajudaicon"
         android:title="Ajude"
         app:showAsAction="ifRoom" />
     <item
+        android:id="@+id/meusPets"
         android:icon="@drawable/dogicon"
         android:title="Meus Pets"
         app:showAsAction="ifRoom" />
