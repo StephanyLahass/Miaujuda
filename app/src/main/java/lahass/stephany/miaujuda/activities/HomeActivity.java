@@ -1,7 +1,6 @@
 package lahass.stephany.miaujuda.activities;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -19,6 +18,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 import lahass.stephany.miaujuda.R;
+import lahass.stephany.miaujuda.fragments.FavoritosFragment;
 import lahass.stephany.miaujuda.fragments.HomeFragment;
 import lahass.stephany.miaujuda.fragments.MeusPetsFragment;
 import lahass.stephany.miaujuda.fragments.PerdidosFragment;
@@ -31,7 +31,7 @@ public class HomeActivity extends AppCompatActivity {
     PerdidosFragment perdidosFragment = new PerdidosFragment();
     MeusPetsFragment meusPetsFragment = new MeusPetsFragment();
     PerfilFragment perfilFragment = new PerfilFragment();
-
+    FavoritosFragment favoritosFragment = new FavoritosFragment();
 
     @SuppressLint("CommitTransaction")
     @Override
@@ -39,51 +39,73 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_home);
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
 
+        // Configurar a BottomNavigationView
+        setupBottomNavigation();
+
+        // Configurar a Toolbar
+        setupToolbar();
+
+        // Inicializa o fragmento inicial
+        setFragment(homeFragment);
+    }
+
+    // Método para configurar a BottomNavigationView
+    private void setupBottomNavigation() {
         bottomNavigationView = findViewById(R.id.btNav);
-        getSupportFragmentManager().beginTransaction().replace(R.id.HomeFragContainer, homeFragment).commit();
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @SuppressLint("NonConstantResourceId")
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int itemId = item.getItemId();
                 if (itemId == R.id.home) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.HomeFragContainer, homeFragment).commit();
+                    setFragment(homeFragment);
                     return true;
                 } else if (itemId == R.id.ajude) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.HomeFragContainer, perdidosFragment).commit();
+                    setFragment(perdidosFragment);
                     return true;
                 } else if (itemId == R.id.meusPets) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.HomeFragContainer, meusPetsFragment).commit();
+                    setFragment(meusPetsFragment);
+                    return true;
+                } else if (itemId == R.id.favoritos) {
+                    setFragment(favoritosFragment);
                     return true;
                 }
                 return false;
             }
         });
+    }
 
+    // Método para configurar a Toolbar
+    private void setupToolbar() {
         toolbar = findViewById(R.id.tbMain);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("");
+        getSupportActionBar().setTitle("");  // Definir título vazio, ou o título que você deseja
+    }
+
+    // Método para substituir o fragmento
+    private void setFragment(androidx.fragment.app.Fragment fragment) {
+        getSupportFragmentManager().beginTransaction().replace(R.id.HomeFragContainer, fragment).commit();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         MenuInflater inflater = getMenuInflater();
-        //inflater.inflate(R.menu.bottom_nav_menu, menu);
-        inflater.inflate(R.menu.toolbar, menu);
+        inflater.inflate(R.menu.toolbar, menu); // Menu da Toolbar
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.iconPerfil){
-            getSupportFragmentManager().beginTransaction().replace(R.id.HomeFragContainer, perfilFragment).commit();
+        if (item.getItemId() == R.id.iconPerfil) {
+            setFragment(perfilFragment);
             return true;
         }
         return super.onOptionsItemSelected(item);
