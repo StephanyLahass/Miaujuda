@@ -131,8 +131,7 @@
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/bg_edit_text"
                 android:ems="10"
-                android:hint="usuario@gmail.com"
-                android:inputType="text"
+                android:text="usuario@gmail.com"
                 android:textSize="14sp" />
 
             <EditText
@@ -144,8 +143,8 @@
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/bg_edit_text"
                 android:ems="10"
-                android:hint="(99) 9999-9999"
                 android:inputType="numberDecimal"
+                android:text="(99) 9999-9999"
                 android:textSize="14sp" />
 
             <EditText
@@ -157,8 +156,8 @@
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/bg_edit_text"
                 android:ems="10"
-                android:hint="Adicionar nova forma de contato"
                 android:inputType="number"
+                android:text="stezinha@gmail.com"
                 android:textSize="14sp" />
 
             <TextView

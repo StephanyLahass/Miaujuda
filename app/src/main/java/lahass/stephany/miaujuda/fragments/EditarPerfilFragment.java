@@ -1,28 +1,22 @@
 package lahass.stephany.miaujuda.fragments;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import lahass.stephany.miaujuda.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link EditarPerfilFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class EditarPerfilFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    // Declarando os parâmetros
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -30,15 +24,7 @@ public class EditarPerfilFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment EditarPerfilFragment.
-     */
-    // TODO: Rename and change types and number of parameters
+    // Método para criar uma nova instância do fragmento
     public static EditarPerfilFragment newInstance(String param1, String param2) {
         EditarPerfilFragment fragment = new EditarPerfilFragment();
         Bundle args = new Bundle();
@@ -60,7 +46,25 @@ public class EditarPerfilFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_editar_perfil, container, false);
+        // Inflar o layout para este fragmento
+        View view = inflater.inflate(R.layout.fragment_editar_perfil, container, false);
+
+        // Encontrar o botão "SALVAR ALTERAÇÕES" e configurar o OnClickListener
+        Button btnSave = view.findViewById(R.id.btnSave); // ID do botão "SALVAR ALTERAÇÕES"
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Substituir o fragmento atual por PerfilFragment
+                PerfilFragment perfilFragment = new PerfilFragment();
+
+                // Iniciar a transação para substituir o fragmento
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.fragment_container, perfilFragment); // 'R.id.fragment_container' é o contêiner onde o fragmento será exibido
+                transaction.addToBackStack(null); // Opcional: Adicionar à pilha de navegação
+                transaction.commit();
+            }
+        });
+
+        return view;
     }
 }
