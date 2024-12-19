@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_gradiente"
-    tools:context=".MainActivity">
+    tools:context="activities.MainActivity">
 
     <!-- Área Branca com Widgets -->
     <LinearLayout
@@ -70,8 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginTop="16dp"
-            android:background="@android:color/darker_gray"
-            android:contentDescription="@string/image_placeholder" />
+            android:background="@android:color/darker_gray" />
 
         <Button
             android:id="@+id/btnSelecionarImagem"

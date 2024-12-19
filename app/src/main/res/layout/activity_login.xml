@@ -34,12 +34,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="20dp"
             android:fontFamily="@font/montserrat_bold"
             android:gravity="center"
             android:text="BEM-VINDO DE VOLTA!"
             android:textAlignment="center"
-            android:textColor="#9f4903"
+            android:textColor="@color/marrom"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -52,7 +52,7 @@
             android:layout_marginBottom="16dp"
             android:contentDescription="Logo"
             android:scaleType="centerInside"
-            android:scaleX="1.5"
+            android:scaleX="1.7"
             android:scaleY="1.5"
             android:src="@drawable/logomiaujuda" />
 
@@ -61,11 +61,11 @@
             android:id="@+id/tvLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="16dp"
             android:fontFamily="@font/montserrat_bold"
             android:gravity="center"
             android:text="LOGIN"
-            android:textColor="#9f4903"
+            android:textColor="@color/marrom"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -76,8 +76,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:background="@drawable/bg_edit_text"
-            android:fontFamily="@font/montserrat"
-            android:hint="Nome" />
+            android:hint="Nome"
+            android:textSize="14sp" />
 
         <!-- Campo de Senha -->
         <EditText
@@ -86,9 +86,9 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:background="@drawable/bg_edit_text"
-            android:fontFamily="@font/montserrat"
             android:hint="Senha"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:textSize="14sp" />
 
         <!-- Esqueci minha senha -->
         <TextView
@@ -97,9 +97,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="clip_horizontal"
             android:layout_marginBottom="16dp"
-            android:fontFamily="@font/montserrat"
             android:text="Esqueci minha senha"
-            android:textColor="#9f4903"
+            android:textColor="@color/laranjaescuro"
             android:textSize="14sp" />
 
         <!-- Botão de Login -->
@@ -107,13 +106,10 @@
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="15dp"
-            android:backgroundTint="#ff8e30"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="LOGIN"
-            android:textColor="@android:color/white" />
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_bt_laranja"
+            android:textColor="@color/white"
+            android:text="LOGIN" />
 
         <!-- Texto novo na plataforma -->
         <TextView
@@ -122,24 +118,19 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="8dp"
-            android:fontFamily="@font/montserrat"
             android:gravity="center"
             android:text="É novo na plataforma?"
-            android:textColor="#9f4903" />
+            android:textColor="@color/laranjaescuro" />
 
         <!-- Botão de Cadastro -->
         <Button
             android:id="@+id/btnCadastrarPetP"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="15dp"
-            android:background="@drawable/bg_edit_text"
-            android:backgroundTint="@color/white"
-            android:fontFamily="@font/montserrat_bold"
-            android:text="CADASTRAR"
-            android:textColor="#ff8e30" />
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_bt_transparente"
+            android:textColor="@color/laranja"
+            android:text="CADASTRAR" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
