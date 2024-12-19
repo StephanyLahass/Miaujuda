@@ -1,5 +1,6 @@
 package lahass.stephany.miaujuda.activities;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -17,11 +18,18 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 import lahass.stephany.miaujuda.R;
+import lahass.stephany.miaujuda.fragments.HomeFragment;
+import lahass.stephany.miaujuda.fragments.MeusPetsFragment;
+import lahass.stephany.miaujuda.fragments.PerdidosFragment;
 
 public class HomeActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
+    HomeFragment homeFragment = new HomeFragment();
+    PerdidosFragment perdidosFragment = new PerdidosFragment();
+    MeusPetsFragment meusPetsFragment = new MeusPetsFragment();
 
 
+    @SuppressLint("CommitTransaction")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,12 +42,24 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         bottomNavigationView = findViewById(R.id.btNav);
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.HomeFragContainer, homeFragment).commit();
+
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @SuppressLint("NonConstantResourceId")
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                /*switch (item.getItemId()) {
-                    return false
-                }*/
+                int itemId = item.getItemId();
+                if (itemId == R.id.home) {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.HomeFragContainer, homeFragment).commit();
+                    return true;
+                } else if (itemId == R.id.ajude) {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.HomeFragContainer, perdidosFragment).commit();
+                    return true;
+                } else if (itemId == R.id.meusPets) {
+                    getSupportFragmentManager().beginTransaction().replace(R.id.HomeFragContainer, meusPetsFragment).commit();
+                    return true;
+                }
                 return false;
             }
         });
