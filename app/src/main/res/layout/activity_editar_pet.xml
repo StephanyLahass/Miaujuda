@@ -25,15 +25,17 @@
 
             <TextView
                 android:id="@+id/tvCadPetP3"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="15dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:gravity="center"
                 android:text="EDIÇÃO DE PERFIL DE PET"
                 android:textColor="@color/marrom"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <View
@@ -61,30 +63,12 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_bt_transparente"
+                android:fontFamily="@font/montserrat_bold"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
-                android:background="@drawable/bg_bt_laranja"
-                android:textColor="@color/white"
-                android:text="SELECIONAR IMAGEM" />
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/radioButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Cão" />
-
-                <RadioButton
-                    android:id="@+id/radioButton2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Gato" />
-            </RadioGroup>
+                android:text="SELECIONAR IMAGEM"
+                android:textColor="@color/laranja" />
 
             <EditText
                 android:id="@+id/etNome_anAdoc"
@@ -95,8 +79,35 @@
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/bg_edit_text"
                 android:ems="10"
+                android:fontFamily="@font/montserrat"
                 android:hint="Nome do animal:"
-                android:inputType="text" />
+                android:inputType="text"
+                android:textSize="16sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Cão"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Gato"
+                    android:textSize="16sp" />
+            </RadioGroup>
 
             <EditText
                 android:id="@+id/etPeso_anAdoc"
@@ -107,8 +118,10 @@
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/bg_edit_text"
                 android:ems="10"
+                android:fontFamily="@font/montserrat"
                 android:hint="Peso do Animal(kg):"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/etTam_anAdoc"
@@ -119,8 +132,10 @@
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/bg_edit_text"
                 android:ems="10"
+                android:fontFamily="@font/montserrat"
                 android:hint="Tamanho do Animal(cm):"
-                android:inputType="number" />
+                android:inputType="number"
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/etRaca_anAdoc"
@@ -131,8 +146,10 @@
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/bg_edit_text"
                 android:ems="10"
+                android:fontFamily="@font/montserrat"
                 android:hint="Raça do Animal:"
-                android:inputType="text" />
+                android:inputType="text"
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/etDesc_anAdoc"
@@ -143,9 +160,11 @@
                 android:layout_marginEnd="16dp"
                 android:background="@drawable/bg_edit_text"
                 android:ems="10"
+                android:fontFamily="@font/montserrat"
                 android:gravity="start|top"
                 android:hint="Descrição do Animal:"
-                android:inputType="textMultiLine" />
+                android:inputType="textMultiLine"
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/btn_cadPetAd"
@@ -153,11 +172,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
+                android:background="@drawable/bg_bt_laranja"
+                android:fontFamily="@font/montserrat_bold"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
-                android:background="@drawable/bg_bt_laranja"
+                android:text="SALVAR ALTERAÇÕES"
                 android:textColor="@color/white"
-                android:text="SALVAR ALTERAÇÕES" />
+                android:textSize="16sp" />
 
         </LinearLayout>
     </ScrollView>

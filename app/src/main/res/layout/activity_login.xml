@@ -76,8 +76,9 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:background="@drawable/bg_edit_text"
+            android:fontFamily="@font/montserrat"
             android:hint="Nome"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <!-- Campo de Senha -->
         <EditText
@@ -86,9 +87,10 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:background="@drawable/bg_edit_text"
+            android:fontFamily="@font/montserrat"
             android:hint="Senha"
             android:inputType="textPassword"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <!-- Esqueci minha senha -->
         <TextView
@@ -97,6 +99,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="clip_horizontal"
             android:layout_marginBottom="16dp"
+            android:fontFamily="@font/montserrat"
             android:text="Esqueci minha senha"
             android:textColor="@color/laranjaescuro"
             android:textSize="14sp" />
@@ -108,8 +111,9 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:background="@drawable/bg_bt_laranja"
-            android:textColor="@color/white"
-            android:text="LOGIN" />
+            android:fontFamily="@font/montserrat_bold"
+            android:text="LOGIN"
+            android:textColor="@color/white" />
 
         <!-- Texto novo na plataforma -->
         <TextView
@@ -118,6 +122,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="8dp"
+            android:fontFamily="@font/montserrat"
             android:gravity="center"
             android:text="É novo na plataforma?"
             android:textColor="@color/laranjaescuro" />
@@ -129,8 +134,9 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:background="@drawable/bg_bt_transparente"
-            android:textColor="@color/laranja"
-            android:text="CADASTRAR" />
+            android:fontFamily="@font/montserrat_bold"
+            android:text="CADASTRAR"
+            android:textColor="@color/laranja" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
