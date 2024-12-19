@@ -8,6 +8,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import androidx.activity.EdgeToEdge;
+import androidx.appcompat.widget.Toolbar;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -21,12 +22,15 @@ import lahass.stephany.miaujuda.R;
 import lahass.stephany.miaujuda.fragments.HomeFragment;
 import lahass.stephany.miaujuda.fragments.MeusPetsFragment;
 import lahass.stephany.miaujuda.fragments.PerdidosFragment;
+import lahass.stephany.miaujuda.fragments.PerfilFragment;
 
 public class HomeActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
+    Toolbar toolbar;
     HomeFragment homeFragment = new HomeFragment();
     PerdidosFragment perdidosFragment = new PerdidosFragment();
     MeusPetsFragment meusPetsFragment = new MeusPetsFragment();
+    PerfilFragment perfilFragment = new PerfilFragment();
 
 
     @SuppressLint("CommitTransaction")
@@ -42,9 +46,7 @@ public class HomeActivity extends AppCompatActivity {
         });
 
         bottomNavigationView = findViewById(R.id.btNav);
-
         getSupportFragmentManager().beginTransaction().replace(R.id.HomeFragContainer, homeFragment).commit();
-
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @SuppressLint("NonConstantResourceId")
             @Override
@@ -64,17 +66,26 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        toolbar = findViewById(R.id.tbMain);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("");
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.bottom_nav_menu, menu);
+        //inflater.inflate(R.menu.bottom_nav_menu, menu);
         inflater.inflate(R.menu.toolbar, menu);
         return true;
     }
 
-
-
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.iconPerfil){
+            getSupportFragmentManager().beginTransaction().replace(R.id.HomeFragContainer, perfilFragment).commit();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
