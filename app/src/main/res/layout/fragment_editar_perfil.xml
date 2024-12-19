@@ -29,20 +29,21 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="8dp"
+                android:fontFamily="@font/montserrat_bold"
                 android:gravity="center"
                 android:text="EDIÇÃO DE PERFIL DE PET"
                 android:textColor="#9f4903"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
             <View
                 android:id="@+id/view2"
-                android:layout_width="294dp"
+                android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="29dp"
-                android:background="#000000" />
+                android:background="#6A333333" />
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -63,39 +64,43 @@
                 <Button
                     android:id="@+id/button"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="38dp"
                     android:layout_weight="1"
-                    android:text="Tirar Foto"
                     android:background="@drawable/bg_bt_laranja"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Tirar Foto"
                     android:textColor="@color/white" />
 
                 <Button
                     android:id="@+id/button2"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_height="38dp"
                     android:layout_marginStart="8dp"
-                    android:text="Escolher Foto"
+                    android:layout_weight="1"
                     android:background="@drawable/bg_bt_laranja"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Escolher Foto"
                     android:textColor="@color/white" />
             </LinearLayout>
 
             <Button
                 android:id="@+id/button3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="38dp"
                 android:layout_marginTop="8dp"
-                android:text="Excluir Foto"
                 android:background="@drawable/bg_bt_laranja"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Excluir Foto"
                 android:textColor="@color/white" />
 
 
             <TextView
                 android:id="@+id/tvCadPetP2"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="8dp"
+                android:fontFamily="@font/montserrat_bold"
                 android:gravity="center"
                 android:text="Formas de Contato"
                 android:textColor="#9f4903"
@@ -110,6 +115,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:ems="10"
+                android:fontFamily="@font/montserrat"
                 android:hint="usuario@gmail.com"
                 android:inputType="text" />
 
@@ -121,6 +127,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:ems="10"
+                android:fontFamily="@font/montserrat"
                 android:hint="(99) 9999-9999"
                 android:inputType="numberDecimal" />
 
@@ -132,6 +139,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:ems="10"
+                android:fontFamily="@font/montserrat"
                 android:hint="Adicionar nova forma de contato"
                 android:inputType="number" />
 
@@ -139,28 +147,33 @@
                 android:id="@+id/tvLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="LOCALIZAÇÃO"
-                android:textColor="#FF6F00"
-                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Localização"
+                android:textColor="#9f4903"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvLocationDetails"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center_horizontal"
                 android:text="Instituto Federal do Espírito Santo, Campus Serra"
-                android:textSize="14sp"
-                android:gravity="center_horizontal" />
+                android:textSize="14sp" />
 
             <Button
                 android:id="@+id/btnChangeLocation"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_marginTop="8dp"
-                android:text="Alterar localização"
                 android:background="@drawable/bg_bt_laranja"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Alterar localização"
                 android:textColor="@color/white" />
 
             <Button
@@ -168,9 +181,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/bg_bt_laranja"
-                android:textColor="@color/white"
-                android:text="SALVAR ALTERAÇÕES" />
+                android:fontFamily="@font/montserrat_bold"
+                android:text="SALVAR ALTERAÇÕES"
+                android:textColor="@color/white" />
 
         </LinearLayout>
     </ScrollView>
