@@ -11,6 +11,10 @@
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/bg_container_branco"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,8 +22,8 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -28,22 +32,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:gravity="center"
-                android:text="EDIÇÃO DE PERFIL DE PET"
+                android:text="STÉPHANY LAHASS"
                 android:textColor="#9f4903"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <View
                 android:id="@+id/view2"
-                android:layout_width="match_parent"
+                android:layout_width="294dp"
                 android:layout_height="2dp"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="29dp"
-                android:background="#6A333333" />
+                android:background="@color/cinza" />
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -57,41 +62,51 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginTop="8dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/button"
                     android:layout_width="wrap_content"
-                    android:layout_height="38dp"
+                    android:layout_height="35dp"
                     android:layout_weight="1"
-                    android:background="@drawable/bg_bt_laranja"
+                    android:background="@drawable/bg_bt_transparente"
                     android:fontFamily="@font/montserrat_bold"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
                     android:text="Tirar Foto"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/laranja"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/button2"
                     android:layout_width="wrap_content"
-                    android:layout_height="38dp"
+                    android:layout_height="35dp"
                     android:layout_marginStart="8dp"
                     android:layout_weight="1"
-                    android:background="@drawable/bg_bt_laranja"
+                    android:background="@drawable/bg_bt_transparente"
                     android:fontFamily="@font/montserrat_bold"
                     android:text="Escolher Foto"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/laranja"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <Button
                 android:id="@+id/button3"
                 android:layout_width="wrap_content"
-                android:layout_height="38dp"
+                android:layout_height="35dp"
                 android:layout_marginTop="8dp"
-                android:background="@drawable/bg_bt_laranja"
+                android:background="@drawable/bg_bt_transparente"
                 android:fontFamily="@font/montserrat_bold"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
                 android:text="Excluir Foto"
-                android:textColor="@color/white" />
+                android:textColor="@color/laranja"
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
 
             <TextView
@@ -99,68 +114,94 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="8dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="15dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:gravity="center"
-                android:text="Formas de Contato"
-                android:textColor="#9f4903"
+                android:text="FORMAS DE CONTATO"
+                android:textColor="@color/laranjaescuro"
                 android:textSize="18sp"
                 android:textStyle="bold" />
+
+            <View
+                android:id="@+id/view10"
+                android:layout_width="200dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="29dp"
+                android:background="@color/cinzaclaro" />
 
             <EditText
                 android:id="@+id/etNome_anAdoc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/bg_edit_text"
                 android:ems="10"
                 android:fontFamily="@font/montserrat"
-                android:hint="usuario@gmail.com"
-                android:inputType="text" />
+                android:text="usuario@gmail.com"
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/etPeso_anAdoc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/bg_edit_text"
                 android:ems="10"
                 android:fontFamily="@font/montserrat"
-                android:hint="(99) 9999-9999"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:text="(99) 9999-9999"
+                android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/etTam_anAdoc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/bg_edit_text"
                 android:ems="10"
                 android:fontFamily="@font/montserrat"
-                android:hint="Adicionar nova forma de contato"
-                android:inputType="number" />
+                android:inputType="number"
+                android:text="stezinha@gmail.com"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/tvLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/montserrat_bold"
-                android:text="Localização"
-                android:textColor="#9f4903"
-                android:textSize="18sp"
+                android:text="LOCALIZAÇÃO"
+                android:textColor="@color/laranjaescuro"
+                android:textSize="16sp"
                 android:textStyle="bold" />
+
+            <View
+                android:id="@+id/view10"
+                android:layout_width="200dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="29dp"
+                android:background="@color/cinzaclaro" />
 
             <TextView
                 android:id="@+id/tvLocationDetails"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="16dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="6dp"
                 android:fontFamily="@font/montserrat"
                 android:gravity="center_horizontal"
                 android:text="Instituto Federal do Espírito Santo, Campus Serra"
@@ -170,20 +211,36 @@
                 android:id="@+id/btnChangeLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/bg_bt_laranja"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_bt_transparente"
                 android:fontFamily="@font/montserrat_bold"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
                 android:text="Alterar localização"
-                android:textColor="@color/white" />
+                android:textColor="@color/laranja"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="294dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="29dp"
+                android:background="@color/cinza" />
 
             <Button
                 android:id="@+id/btnSave"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/bg_bt_laranja"
                 android:fontFamily="@font/montserrat_bold"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
                 android:text="SALVAR ALTERAÇÕES"
                 android:textColor="@color/white" />
 

@@ -1,5 +1,6 @@
 package lahass.stephany.miaujuda.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -23,4 +24,5 @@ public class InfoPetActivity extends AppCompatActivity {
             return insets;
         });
     }
+
 }

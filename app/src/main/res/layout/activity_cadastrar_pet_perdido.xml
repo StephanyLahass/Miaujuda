@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_gradiente"
-    tools:context=".MainActivity">
+    tools:context="activities.MainActivity">
 
     <!-- Área Branca com Widgets -->
     <LinearLayout
         android:id="@+id/linearLayoutContent"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
@@ -31,18 +31,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/montserrat_bold"
             android:gravity="center"
             android:text="CADASTRO DE PET PERDIDO"
             android:textColor="#9f4903"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <!-- Botões de Seleção -->
-        <LinearLayout
+        <View
+            android:id="@+id/view3"
             android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="8dp"
+            android:background="#6A333333" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -67,8 +79,9 @@
         <!-- Imagem de Seleção -->
         <ImageView
             android:id="@+id/ivPetImage"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="200dp"
+            android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:background="@android:color/darker_gray" />
 
@@ -79,61 +92,77 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="8dp"
             android:background="@drawable/bg_bt_transparente"
-            android:text="SELECIONAR IMAGEM" />
+            android:fontFamily="@font/montserrat_bold"
+            android:text="SELECIONAR IMAGEM"
+            android:textColor="@color/laranja" />
 
         <!-- Campos de Texto -->
         <EditText
             android:id="@+id/etNomeAnimal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="16dp"
+            android:layout_marginRight="10dp"
             android:background="@drawable/bg_edit_text"
+            android:fontFamily="@font/montserrat"
             android:hint="Nome do animal"
-            android:minHeight="48dp"
-            android:padding="8dp" />
+            android:padding="8dp"
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/etDescAnimal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="8dp"
+            android:layout_marginRight="10dp"
             android:background="@drawable/bg_edit_text"
+            android:fontFamily="@font/montserrat"
             android:hint="Descrição do animal"
-            android:minHeight="48dp"
-            android:padding="8dp" />
+            android:padding="8dp"
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/etUltimaLocalizacao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="8dp"
+            android:layout_marginRight="10dp"
             android:background="@drawable/bg_edit_text"
+            android:fontFamily="@font/montserrat"
             android:hint="Última localização"
-            android:minHeight="48dp"
-            android:padding="8dp" />
+            android:padding="8dp"
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/etFormaContato"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="8dp"
+            android:layout_marginRight="10dp"
             android:background="@drawable/bg_edit_text"
+            android:fontFamily="@font/montserrat"
             android:hint="Forma de contato"
-            android:minHeight="48dp"
-            android:padding="8dp" />
+            android:padding="8dp"
+            android:textSize="16sp" />
 
         <!-- Botão de Cadastro -->
         <Button
             android:id="@+id/btnCadastrarPetP"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="60dp"
             android:layout_marginTop="16dp"
+            android:layout_marginRight="60dp"
             android:background="@drawable/bg_bt_laranja"
-            android:minHeight="48dp"
+            android:fontFamily="@font/montserrat_bold"
             android:text="CADASTRAR"
             android:textColor="@color/white"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:textSize="16sp" />
 
     </LinearLayout>
 

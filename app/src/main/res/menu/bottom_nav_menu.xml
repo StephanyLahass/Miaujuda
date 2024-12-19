@@ -13,6 +13,11 @@
         android:title="Ajude"
         app:showAsAction="ifRoom" />
     <item
+        android:id="@+id/favoritos"
+        android:icon="@drawable/iconheart_selecionado"
+        android:title="Favoritos"
+        app:showAsAction="always" />
+    <item
         android:id="@+id/meusPets"
         android:icon="@drawable/dogicon"
         android:title="Meus Pets"

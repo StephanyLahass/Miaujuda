@@ -2,6 +2,7 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.PerfilFragment">
@@ -14,8 +15,12 @@
         tools:context=".activities.EditarPetActivity">
 
         <ScrollView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
             android:background="@drawable/bg_container_branco"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -25,7 +30,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
+                android:gravity="center|center_vertical"
                 android:orientation="vertical">
 
                 <TextView
@@ -33,95 +38,120 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/montserrat_bold"
                     android:gravity="center"
-                    android:text="PERFIL DE USUÁRIO"
-                    android:textColor="#9f4903"
-                    android:textSize="18sp"
+                    android:text="STÉPHANY LAHASS"
+                    android:textColor="@color/marrom"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <View
                     android:id="@+id/view5"
-                    android:layout_width="294dp"
+                    android:layout_width="match_parent"
                     android:layout_height="2dp"
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="29dp"
-                    android:background="#6A333333" />
+                    android:background="@color/cinza" />
 
                 <ImageView
                     android:id="@+id/imageView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
                     android:layout_marginStart="70dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="70dp"
-                    tools:srcCompat="@tools:sample/avatars" />
+                    tools:srcCompat="@drawable/bonitinha" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/montserrat_bold"
                     android:text="FORMAS DE CONTATO"
-                    android:textColor="#FF6F00"
-                    android:textSize="16sp"
+                    android:textColor="@color/laranjaescuro"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/view10"
+                    android:layout_width="200dp"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="29dp"
+                    android:background="@color/cinzaclaro" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="usuario@gmail.com"
-                    android:textSize="14sp" />
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="lahass2stephany@gmail.com"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
                     android:text="(99) 99999-9999"
                     android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="26dp"
+                    android:fontFamily="@font/montserrat_bold"
                     android:text="LOCALIZAÇÃO"
-                    android:textColor="#FF6F00"
-                    android:textSize="16sp"
+                    android:textColor="@color/laranjaescuro"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/view10"
+                    android:layout_width="200dp"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="29dp"
+                    android:background="@color/cinzaclaro" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
                     android:layout_marginTop="8dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center_horizontal"
                     android:text="Instituto Federal do Espírito Santo, Campus Serra"
-                    android:textSize="14sp"
-                    android:gravity="center_horizontal" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:background="@drawable/bg_bt_laranja"
-                    android:textColor="@color/white"
-                    android:text="Ver Animais Curtidos" />
+                    android:textSize="16sp" />
 
                 <View
                     android:id="@+id/view6"
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
                     android:layout_marginStart="24dp"
-                    android:layout_marginTop="120dp"
+                    android:layout_marginTop="10dp"
                     android:layout_marginEnd="29dp"
-                    android:background="#6A333333" />
+                    android:background="@color/cinza" />
 
 
                 <Button
+                    android:id="@+id/btnEditarPerfil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
+                    android:layout_marginBottom="25dp"
                     android:background="@drawable/bg_bt_laranja"
-                    android:textColor="@color/white"
-                    android:text="EDITAR PERFIL" />
+                    android:fontFamily="@font/montserrat_bold"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="EDITAR PERFIL"
+                    android:textColor="@color/white" />
 
 
             </LinearLayout>

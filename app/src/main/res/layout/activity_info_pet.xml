@@ -44,7 +44,7 @@
                     android:layout_marginRight="20dp"
                     android:fontFamily="@font/montserrat_bold"
                     android:gravity="center"
-                    android:text="NOME DO ANIMAL"
+                    android:text="TOTÓ"
                     android:textColor="#9f4903"
                     android:textSize="24sp" />
 
@@ -52,11 +52,11 @@
                     android:id="@+id/view7"
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="25dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
-                    android:background="#000000" />
+                    android:layout_marginEnd="29dp"
+                    android:background="@color/cinza" />
 
                 <ImageView
                     android:id="@+id/imageView4"
@@ -77,7 +77,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="24dp"
                         android:layout_marginTop="8dp"
-                        android:text="Nome do Animal:"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Nome do Doador:"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
@@ -89,6 +90,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="24dp"
                         android:layout_marginTop="8dp"
+                        android:fontFamily="@font/montserrat_bold"
                         android:text="Localização:"
                         android:textSize="18sp"
                         android:textStyle="bold"
@@ -97,12 +99,12 @@
 
                     <View
                         android:id="@+id/view8"
-                        android:layout_width="match_parent"
+
                         android:layout_height="2dp"
                         android:layout_marginStart="24dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="24dp"
-                        android:background="#000000"
+                        android:background="@color/cinzaclaro"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView14" />
@@ -111,13 +113,13 @@
                         android:id="@+id/textView16"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
                         android:layout_marginTop="8dp"
+                        android:fontFamily="@font/montserrat_bold"
                         android:gravity="right"
                         android:text="Tamanho:"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.097"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/view8" />
 
@@ -125,27 +127,28 @@
                         android:id="@+id/textView18"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="60dp"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/montserrat_bold"
                         android:text="Sexo:"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.086"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+                        app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
                     <TextView
                         android:id="@+id/textView19"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/montserrat_bold"
                         android:gravity="right"
                         android:text="Peso:"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.086"
                         app:layout_constraintStart_toStartOf="parent"
-                        tools:layout_editor_absoluteY="125dp" />
+                        app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
                     <View
                         android:id="@+id/view10"
@@ -153,7 +156,7 @@
                         android:layout_height="2dp"
                         android:layout_marginStart="24dp"
                         android:layout_marginEnd="24dp"
-                        android:background="#000000"
+                        android:background="@color/cinza"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         tools:layout_editor_absoluteY="205dp" />
@@ -178,7 +181,8 @@
                         android:layout_marginStart="24dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="24dp"
-                        android:text="TextView"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Um cachorro fofinho, de pelos macios e olhos que derretem corações. Adora fazer companhia!"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView25" />
@@ -191,8 +195,12 @@
                         android:layout_marginTop="16dp"
                         android:layout_marginEnd="8dp"
                         android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_bt_laranja"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
                         android:text="QUERO ADOTAR"
-                        android:backgroundTint="#ff8e30"
+                        android:textColor="@color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -203,9 +211,60 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
+                        android:backgroundTint="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@android:drawable/btn_star" />
+                        app:srcCompat="@drawable/iconheart_sem_selecao" />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Stéphany"
+                        app:layout_constraintStart_toEndOf="@+id/textView12"
+                        tools:layout_editor_absoluteY="8dp" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Ifes Campus Serra"
+                        app:layout_constraintStart_toEndOf="@+id/textView14"
+                        tools:layout_editor_absoluteY="43dp" />
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="15cm"
+                        app:layout_constraintStart_toEndOf="@+id/textView16"
+                        tools:layout_editor_absoluteY="88dp" />
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="5kg"
+                        app:layout_constraintStart_toEndOf="@+id/textView19"
+                        tools:layout_editor_absoluteY="125dp" />
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Macho"
+                        app:layout_constraintStart_toEndOf="@+id/textView18"
+                        tools:layout_editor_absoluteY="163dp" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

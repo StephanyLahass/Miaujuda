@@ -1,5 +1,6 @@
 package lahass.stephany.miaujuda.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -73,8 +74,19 @@ public class CadastroActivity extends AppCompatActivity {
                     return;
                 }
 
-                finish();
+                // Botão de Cadastro
+                Button btnRegister = findViewById(R.id.btnRegistro);
+                btnRegister.setOnClickListener(e -> {
 
+
+                    // Simula login bem-sucedido
+                    Toast.makeText(CadastroActivity.this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
+
+                    // Cria uma Intent para abrir a CadastroActivity
+                    Intent intent = new Intent(CadastroActivity.this, HomeActivity.class);
+                    startActivity(intent);
+
+                });
 
             }
         });

@@ -14,7 +14,7 @@ public class HomeActivityViewModel extends ViewModel {
         List<Pet> pets = new ArrayList<>();
 
         Pet p1 = new Pet();
-        p1.nome = "Escroto";
+        p1.nome = "Gatoso";
         p1.localizacao = "Serra";
         p1.foto = R.drawable.gato;
         pets.add(p1);
