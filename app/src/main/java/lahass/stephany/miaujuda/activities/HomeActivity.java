@@ -54,6 +54,7 @@ public class HomeActivity extends AppCompatActivity {
 
         // Inicializa o fragmento inicial
         setFragment(homeFragment);
+
     }
 
     // Método para configurar a BottomNavigationView

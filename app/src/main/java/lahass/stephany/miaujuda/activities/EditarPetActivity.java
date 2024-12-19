@@ -27,7 +27,7 @@ public class EditarPetActivity extends AppCompatActivity {
             return insets;
         });
 
-        // Quando o usuário clicar no bptão cadastrar
+        // Quando o usuário clicar no botão cadastrar
         Button btnCadPetad =  findViewById(R.id.btn_cadPetAd);
         btnCadPetad.setOnClickListener(new View.OnClickListener() {
             @Override

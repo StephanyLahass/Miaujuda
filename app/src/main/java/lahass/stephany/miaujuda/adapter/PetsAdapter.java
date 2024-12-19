@@ -1,5 +1,7 @@
 package lahass.stephany.miaujuda.adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,24 +9,30 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
 import lahass.stephany.miaujuda.R;
 import lahass.stephany.miaujuda.activities.HomeActivity;
+import lahass.stephany.miaujuda.activities.InfoPetActivity;
+import lahass.stephany.miaujuda.fragments.HomeFragment;
 import lahass.stephany.miaujuda.model.Pet;
 
 
 public class PetsAdapter extends RecyclerView.Adapter<PetsAdapter.MyViewHolder> {
-    // Referência à atividade MainActivity e à lista de itens
+    // Referência à atividade homeActivity e à lista de itens
     HomeActivity homeActivity;
     List<Pet> pets;
+
+    private Context context;
 
 
     public PetsAdapter(HomeActivity mainActivity, List<Pet> itens) {
         this.homeActivity = mainActivity;
         this.pets = itens;
+        this.context = context;
     }
 
 
@@ -37,7 +45,6 @@ public class PetsAdapter extends RecyclerView.Adapter<PetsAdapter.MyViewHolder> 
         // Retorna um novo objeto ViewHolder
         return new MyViewHolder(v);
     }
-
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
@@ -55,6 +62,13 @@ public class PetsAdapter extends RecyclerView.Adapter<PetsAdapter.MyViewHolder> 
 
         TextView tvdesc = v.findViewById(R.id.tvLocAnimal);
         tvdesc.setText(pet.localizacao);
+
+        v.setOnClickListener(view -> {
+            Context context = view.getContext();
+            Intent intent = new Intent(context, InfoPetActivity.class);
+            context.startActivity(intent);
+        });
+
     }
 
     // Método para obter o número total de itens na lista
@@ -66,8 +80,11 @@ public class PetsAdapter extends RecyclerView.Adapter<PetsAdapter.MyViewHolder> 
     // Classe interna para representar os itens de lista
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         // Construtor
-        public MyViewHolder(@NonNull View itemView) {
+        public MyViewHolder(final View itemView) {
             super(itemView);
         }
+
     }
+
+
 }
