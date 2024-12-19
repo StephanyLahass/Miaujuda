@@ -122,13 +122,13 @@
         <!-- Botão de Cadastro -->
         <Button
             android:id="@+id/btnCadastrarPetP"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="135dp"
+            android:layout_height="60dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
             android:background="@drawable/bg_bt_laranja"
-            android:textColor="@color/white"
-            android:text="CADASTRAR" />
+            android:text="CADASTRAR"
+            android:textColor="@color/white" />
 
     </LinearLayout>
 

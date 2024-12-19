@@ -56,15 +56,15 @@ public class HomeActivityViewModel extends ViewModel {
         pets.add(p7);
 
         Pet p8 = new Pet();
-        p8.nome = "Bidu";
+        p8.nome = "Princesa";
         p8.localizacao = "Aracruz";
-        p8.foto = R.drawable.cachorro_azul;
+        p8.foto = R.drawable.cachorro_grande;
         pets.add(p8);
 
         Pet p9 = new Pet();
-        p9.nome = "Nina";
+        p9.nome = "Destruidora Jr";
         p9.localizacao = "São Mateus";
-        p9.foto = R.drawable.gato_siamês;
+        p9.foto = R.drawable.cachorro_fofo;
         pets.add(p9);
 
         Pet p10 = new Pet();
