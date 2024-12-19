@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_gradiente"
-    tools:context="activities.MainActivity">
+    tools:context=".MainActivity">
 
     <!-- Área Branca com Widgets -->
     <LinearLayout
@@ -70,7 +70,8 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginTop="16dp"
-            android:background="@android:color/darker_gray" />
+            android:background="@android:color/darker_gray"
+            android:contentDescription="@string/image_placeholder" />
 
         <Button
             android:id="@+id/btnSelecionarImagem"
@@ -89,7 +90,6 @@
             android:layout_marginTop="16dp"
             android:background="@drawable/bg_edit_text"
             android:hint="Nome do animal"
-            android:minHeight="48dp"
             android:padding="8dp" />
 
         <EditText
@@ -99,7 +99,6 @@
             android:layout_marginTop="8dp"
             android:background="@drawable/bg_edit_text"
             android:hint="Descrição do animal"
-            android:minHeight="48dp"
             android:padding="8dp" />
 
         <EditText
@@ -109,7 +108,6 @@
             android:layout_marginTop="8dp"
             android:background="@drawable/bg_edit_text"
             android:hint="Última localização"
-            android:minHeight="48dp"
             android:padding="8dp" />
 
         <EditText
@@ -119,7 +117,6 @@
             android:layout_marginTop="8dp"
             android:background="@drawable/bg_edit_text"
             android:hint="Forma de contato"
-            android:minHeight="48dp"
             android:padding="8dp" />
 
         <!-- Botão de Cadastro -->
@@ -130,10 +127,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
             android:background="@drawable/bg_bt_laranja"
-            android:minHeight="48dp"
-            android:text="CADASTRAR"
             android:textColor="@color/white"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:text="CADASTRAR" />
 
     </LinearLayout>
 

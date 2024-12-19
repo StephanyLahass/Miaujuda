@@ -2,5 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="pessego">#fbe6d7</color>
     <color name="laranja">#ff8e30</color>
+    <color name="laranjaescuro">#d87c04</color>
+    <color name="marrom">#9f4903</color>
+    <color name="cinza">#6A333333</color>
+    <color name="cinzaclaro">#ededed</color>
+
+
 </resources>

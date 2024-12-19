@@ -37,7 +37,7 @@
                 android:fontFamily="@font/montserrat_bold"
                 android:gravity="center"
                 android:text="CADASTRO DE PET PARA ADOÇÃO"
-                android:textColor="#9f4903"
+                android:textColor="@color/marrom"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -67,7 +67,8 @@
                 android:layout_marginLeft="75dp"
                 android:layout_marginRight="75dp"
                 android:layout_marginBottom="10dp"
-                android:backgroundTint="#ff8e30"
+                android:background="@drawable/bg_bt_transparente"
+                android:textColor="@color/laranja"
                 android:text="SELECIONAR IMAGEM" />
 
             <EditText
@@ -175,7 +176,8 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="60dp"
                 android:layout_marginBottom="10dp"
-                android:backgroundTint="#ff8e30"
+                android:background="@drawable/bg_bt_laranja"
+                android:textColor="@color/white"
                 android:text="CADASTRAR" />
 
         </LinearLayout>

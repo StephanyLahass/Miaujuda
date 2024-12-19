@@ -44,7 +44,7 @@
                     android:layout_marginRight="20dp"
                     android:fontFamily="@font/montserrat_bold"
                     android:gravity="center"
-                    android:text="NOME DO ANIMAL"
+                    android:text="TOTÓ"
                     android:textColor="#9f4903"
                     android:textSize="24sp" />
 
@@ -52,11 +52,11 @@
                     android:id="@+id/view7"
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="25dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
-                    android:background="#000000" />
+                    android:layout_marginEnd="29dp"
+                    android:background="@color/cinza" />
 
                 <ImageView
                     android:id="@+id/imageView4"
@@ -77,7 +77,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="24dp"
                         android:layout_marginTop="8dp"
-                        android:text="Nome do Animal:"
+                        android:text="Nome do Doador:"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"
@@ -97,12 +97,12 @@
 
                     <View
                         android:id="@+id/view8"
-                        android:layout_width="match_parent"
+
                         android:layout_height="2dp"
                         android:layout_marginStart="24dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="24dp"
-                        android:background="#000000"
+                        android:background="@color/cinzaclaro"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView14" />
@@ -153,7 +153,7 @@
                         android:layout_height="2dp"
                         android:layout_marginStart="24dp"
                         android:layout_marginEnd="24dp"
-                        android:background="#000000"
+                        android:background="@color/cinza"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         tools:layout_editor_absoluteY="205dp" />
@@ -178,7 +178,7 @@
                         android:layout_marginStart="24dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="24dp"
-                        android:text="TextView"
+                        android:text="Um cachorro fofinho, de pelos macios e olhos que derretem corações. Adora fazer companhia!"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView25" />
@@ -191,8 +191,11 @@
                         android:layout_marginTop="16dp"
                         android:layout_marginEnd="8dp"
                         android:layout_marginBottom="16dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
                         android:text="QUERO ADOTAR"
-                        android:backgroundTint="#ff8e30"
+                        android:background="@drawable/bg_bt_laranja"
+                        android:textColor="@color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -203,9 +206,50 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
+                        android:backgroundTint="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:srcCompat="@android:drawable/btn_star" />
+                        app:srcCompat="@drawable/iconheart_sem_selecao" />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Stéphany"
+                        tools:layout_editor_absoluteX="174dp"
+                        tools:layout_editor_absoluteY="12dp" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ifes Campus Serra"
+                        tools:layout_editor_absoluteX="138dp"
+                        tools:layout_editor_absoluteY="45dp" />
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="15cm"
+                        tools:layout_editor_absoluteX="116dp"
+                        tools:layout_editor_absoluteY="82dp" />
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5kg"
+                        tools:layout_editor_absoluteX="80dp"
+                        tools:layout_editor_absoluteY="125dp" />
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Macho"
+                        tools:layout_editor_absoluteX="80dp"
+                        tools:layout_editor_absoluteY="168dp" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

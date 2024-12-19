@@ -33,10 +33,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="16dp"
                     android:gravity="center"
-                    android:text="PERFIL DE USUÁRIO"
-                    android:textColor="#9f4903"
+                    android:text="STÉPHANY LAHASS"
+                    android:textColor="@color/marrom"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -47,7 +47,7 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="29dp"
-                    android:background="#6A333333" />
+                    android:background="@color/cinza" />
 
                 <ImageView
                     android:id="@+id/imageView2"
@@ -63,15 +63,24 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:text="FORMAS DE CONTATO"
-                    android:textColor="#FF6F00"
+                    android:textColor="@color/laranjaescuro"
                     android:textSize="16sp"
                     android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/view10"
+                    android:layout_width="200dp"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="29dp"
+                    android:background="@color/cinzaclaro" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="usuario@gmail.com"
+                    android:text="lahass2stephany@gmail.com"
                     android:textSize="14sp" />
 
                 <TextView
@@ -83,11 +92,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="26dp"
                     android:text="LOCALIZAÇÃO"
-                    android:textColor="#FF6F00"
+                    android:textColor="@color/laranjaescuro"
                     android:textSize="16sp"
                     android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/view10"
+                    android:layout_width="200dp"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="29dp"
+                    android:background="@color/cinzaclaro" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -101,9 +119,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
                     android:background="@drawable/bg_bt_laranja"
                     android:textColor="@color/white"
                     android:text="Ver Animais Curtidos" />
+
+                <View
+                    android:id="@+id/view10"
+                    android:layout_width="200dp"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="29dp"
+                    android:background="@color/cinzaclaro" />
 
                 <View
                     android:id="@+id/view6"
@@ -112,13 +141,16 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="120dp"
                     android:layout_marginEnd="29dp"
-                    android:background="#6A333333" />
+                    android:background="@color/cinza" />
 
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
                     android:background="@drawable/bg_bt_laranja"
                     android:textColor="@color/white"
                     android:text="EDITAR PERFIL" />

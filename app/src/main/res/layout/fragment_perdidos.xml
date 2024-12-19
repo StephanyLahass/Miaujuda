@@ -23,7 +23,7 @@
             android:gravity="center"
             android:text="AJUDE A ENCONTRAR UM PET PERDIDO"
             android:textAlignment="center"
-            android:textColor="#9f4903"
+            android:textColor="@color/marrom"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -34,7 +34,7 @@
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
             android:layout_marginBottom="5dp"
-            android:background="#6A333333" />
+            android:background="@color/cinza" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvPetPerdido"

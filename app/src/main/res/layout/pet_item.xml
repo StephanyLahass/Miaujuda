@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_fundo_lista">
 
     <ImageView
         android:id="@+id/imvFoto"
@@ -27,7 +28,7 @@
         android:fontFamily="@font/montserrat_bold"
         android:text="NOME DO ANIMAL"
         android:textAlignment="center"
-        android:textColor="#9f4903"
+        android:textColor="@color/marrom"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
