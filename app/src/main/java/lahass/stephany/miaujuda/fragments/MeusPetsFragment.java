@@ -1,9 +1,13 @@
 package lahass.stephany.miaujuda.fragments;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -12,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -19,6 +24,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.List;
 
 import lahass.stephany.miaujuda.R;
+import lahass.stephany.miaujuda.activities.CadastrarPetActivity;
+import lahass.stephany.miaujuda.activities.CadastrarPetPerdidoActivity;
 import lahass.stephany.miaujuda.activities.HomeActivity;
 import lahass.stephany.miaujuda.adapter.PetsAdapter;
 import lahass.stephany.miaujuda.model.HomeActivityViewModel;
@@ -93,11 +100,47 @@ public class MeusPetsFragment extends Fragment {
         FloatingActionButton fab = view.findViewById(R.id.fabCadPet);
         fab.setOnClickListener(new View.OnClickListener() {
 
+            // partezinha que puxa o metodo para aparecer o dialog depois de clicar no botao
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "esta funcionando", Toast.LENGTH_SHORT).show();
+                showDialog();
             }
         });
 
     }
+
+    // metodo pro dialog
+    private void showDialog() {
+        // infla o layout do dialog
+        LayoutInflater layoutInflater = requireActivity().getLayoutInflater();
+        View dialogview = layoutInflater.inflate(R.layout.cadastro_pet_dlg, null);
+
+        AlertDialog dialog = new AlertDialog.Builder(requireContext()).setView(dialogview).create();
+
+        // pega os botoes que estao dentro do dialog
+        Button cadPetAdocao = dialogview.findViewById(R.id.btnCadPetAd);
+        Button cadPetPerdido = dialogview.findViewById(R.id.btnCadPetP);
+
+        // abaixo estao os dois metodos que redirecionam dps de clicar nos botoes dentro do dialog
+        cadPetAdocao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(requireContext(), CadastrarPetActivity.class);
+                startActivity(intent);
+                dialog.dismiss();
+            }
+        });
+
+        cadPetPerdido.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(requireContext(), CadastrarPetPerdidoActivity.class);
+                startActivity(intent);
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
 }
