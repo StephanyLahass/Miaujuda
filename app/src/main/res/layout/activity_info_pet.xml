@@ -8,254 +8,267 @@
     android:background="@drawable/bg_gradiente"
     tools:context=".activities.InfoPetActivity">
 
-    <ScrollView
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="16dp"
-        android:background="@drawable/bg_container_branco"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <ScrollView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:background="@drawable/bg_container_branco"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/tvNomAnAd"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:gravity="center"
-                android:text="TOTÓ"
-                android:textColor="#9f4903"
-                android:textSize="24sp"
-                android:fontFamily="@font/montserrat_bold" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginHorizontal="24dp"
-                android:layout_marginBottom="16dp"
-                android:background="@color/cinza" />
-
-            <ImageView
-                android:id="@+id/imvFotoPet"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginHorizontal="50dp"
-                android:layout_marginBottom="16dp"
-                android:scaleType="centerCrop"
-                tools:srcCompat="@tools:sample/avatars" />
-
-            <!-- Nome do Doador -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="8dp">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:id="@+id/tvNomAnAd"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nome do Doador:"
-                    android:textSize="18sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="20dp"
                     android:fontFamily="@font/montserrat_bold"
-                    android:textStyle="bold" />
+                    android:gravity="center"
+                    android:text="TOTÓ"
+                    android:textColor="#9f4903"
+                    android:textSize="24sp" />
 
-                <TextView
-                    android:id="@+id/tvNomePet"
-                    android:layout_width="wrap_content"
+                <View
+                    android:id="@+id/view7"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="29dp"
+                    android:background="@color/cinza" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="João Silva"
-                    android:textSize="18sp" />
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginBottom="5dp"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Nome do Doador:"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Localização:"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+                    <View
+                        android:id="@+id/view8"
+
+                        android:layout_height="2dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="24dp"
+                        android:background="@color/cinzaclaro"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:gravity="right"
+                        android:text="Tamanho:"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Sexo:"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+                    <TextView
+                        android:id="@+id/textView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:gravity="right"
+                        android:text="Peso:"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+                    <View
+                        android:id="@+id/view10"
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:background="@color/cinza"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="205dp" />
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="#9f4903"
+                        android:text="DESCRIÇÃO DO ANIMAL"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view10" />
+
+                    <TextView
+                        android:id="@+id/textView26"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="24dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Um cachorro fofinho, de pelos macios e olhos que derretem corações. Adora fazer companhia!"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView25" />
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/bg_bt_laranja"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="QUERO ADOTAR"
+                        android:textColor="@color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+                    <ImageButton
+                        android:id="@+id/imageButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:backgroundTint="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/iconheart_sem_selecao" />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="Stéphany"
+                        app:layout_constraintStart_toEndOf="@+id/textView12"
+                        tools:layout_editor_absoluteY="8dp" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Ifes Campus Serra"
+                        app:layout_constraintStart_toEndOf="@+id/textView14"
+                        tools:layout_editor_absoluteY="43dp" />
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="15cm"
+                        app:layout_constraintStart_toEndOf="@+id/textView16"
+                        tools:layout_editor_absoluteY="88dp" />
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="5kg"
+                        app:layout_constraintStart_toEndOf="@+id/textView19"
+                        tools:layout_editor_absoluteY="125dp" />
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Macho"
+                        app:layout_constraintStart_toEndOf="@+id/textView18"
+                        tools:layout_editor_absoluteY="163dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
             </LinearLayout>
-
-            <!-- Localização -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="8dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Localização:"
-                    android:textSize="18sp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tvLocalizacaoPet"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="Vitória - ES"
-                    android:textSize="18sp"
-   />
-            </LinearLayout>
-
-            <!-- Tamanho -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="8dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tamanho:"
-                    android:textSize="18sp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tvTamanho"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="48cm"
-                    android:textSize="18sp"
-                     />
-            </LinearLayout>
-
-            <!-- Peso -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="8dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Peso:"
-                    android:textSize="18sp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tvPeso"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="12kg"
-                    android:textSize="18sp" />
-
-            </LinearLayout>
-
-            <!-- Tipo -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="8dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tipo:"
-                    android:textSize="18sp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tvTipo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="12kg"
-                    android:textSize="18sp" />
-
-            </LinearLayout>
-
-
-            <!-- Sexo -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="8dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sexo:"
-                    android:textSize="18sp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tvSexo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="12kg"
-                    android:textSize="18sp" />
-
-            </LinearLayout>
-
-            <!-- Raça -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="8dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Raça:"
-                    android:textSize="18sp"
-                    android:fontFamily="@font/montserrat_bold"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tvRaca"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="12kg"
-                    android:textSize="18sp" />
-
-            </LinearLayout>
-
-            <!-- Outros campos seguem o mesmo padrão -->
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginBottom="16dp"
-                android:layout_marginHorizontal="24dp"
-                android:background="@color/cinza" />
-
-            <TextView
-                android:id="@+id/textView25"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:gravity="center"
-                android:text="DESCRIÇÃO DO ANIMAL"
-                android:textColor="#9f4903"
-                android:textSize="20sp"
-                android:fontFamily="@font/montserrat_bold" />
-
-            <Button
-                android:id="@+id/btnAdotar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@drawable/bg_bt_laranja"
-                android:text="QUERO ADOTAR"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
-                android:fontFamily="@font/montserrat_bold" />
-        </LinearLayout>
-    </ScrollView>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
