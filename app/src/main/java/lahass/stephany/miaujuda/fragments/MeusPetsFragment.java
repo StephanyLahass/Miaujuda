@@ -111,35 +111,36 @@ public class MeusPetsFragment extends Fragment {
 
     // metodo pro dialog
     private void showDialog() {
-        // infla o layout do dialog
-        LayoutInflater layoutInflater = requireActivity().getLayoutInflater();
-        View dialogview = layoutInflater.inflate(R.layout.cadastro_pet_dlg, null);
+        if (getContext() == null) return;
 
-        AlertDialog dialog = new AlertDialog.Builder(requireContext()).setView(dialogview).create();
+        Dialog dialog = new Dialog(requireContext());
+        dialog.setContentView(R.layout.cadastro_pet_dlg);
 
-        // pega os botoes que estao dentro do dialog
-        Button cadPetAdocao = dialogview.findViewById(R.id.btnCadPetAd);
-        Button cadPetPerdido = dialogview.findViewById(R.id.btnCadPetP);
+        if (dialog.getWindow() != null) {
+            dialog.getWindow().setLayout(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+            );
+        }
 
-        // abaixo estao os dois metodos que redirecionam dps de clicar nos botoes dentro do dialog
-        cadPetAdocao.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(requireContext(), CadastrarPetActivity.class);
-                startActivity(intent);
-                dialog.dismiss();
-            }
+        // pegando os botoes do dialog
+        Button cadPetAdocao = dialog.findViewById(R.id.btnCadPetAd);
+        Button cadPetPerdido = dialog.findViewById(R.id.btnCadPetP);
+
+        // configuracao das acoes executadas com o click nos botoes do dialog
+        cadPetAdocao.setOnClickListener(v -> {
+            Intent intent = new Intent(requireContext(), CadastrarPetActivity.class);
+            startActivity(intent);
+            dialog.dismiss();
         });
 
-        cadPetPerdido.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(requireContext(), CadastrarPetPerdidoActivity.class);
-                startActivity(intent);
-                dialog.dismiss();
-            }
+        cadPetPerdido.setOnClickListener(v -> {
+            Intent intent = new Intent(requireContext(), CadastrarPetPerdidoActivity.class);
+            startActivity(intent);
+            dialog.dismiss();
         });
 
+        // exibicao do dialog
         dialog.show();
     }
 
