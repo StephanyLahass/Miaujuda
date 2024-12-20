@@ -13,7 +13,7 @@ public class Pet {
 
     public String tamanho;
 
-    public String peso;
+    public double peso;
 
     public String sexo;
 
