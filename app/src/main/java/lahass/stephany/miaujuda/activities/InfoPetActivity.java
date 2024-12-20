@@ -1,6 +1,10 @@
 package lahass.stephany.miaujuda.activities;
 
+import android.app.Dialog;
 import android.os.Bundle;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -42,5 +46,20 @@ public class InfoPetActivity extends AppCompatActivity {
         tvSexos.setText(sexo);
         tvTipos.setText(tipo);
         tvRacas.setText(raca);
+
+        Button queroAdotar = findViewById(R.id.btnAdotar);
+        Dialog dialog = new Dialog(InfoPetActivity.this);
+
+        queroAdotar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.setContentView(R.layout.quero_adotar_dlg);
+                dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                dialog.setCancelable(true);
+
+                dialog.show();;
+            }
+        });
+
     }
 }
