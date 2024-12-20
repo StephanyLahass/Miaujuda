@@ -71,6 +71,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
+                    android:fontFamily="@font/montserrat"
                     android:text="João Silva"
                     android:textSize="18sp" />
             </LinearLayout>
@@ -95,9 +96,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
+                    android:fontFamily="@font/montserrat"
                     android:text="Vitória - ES"
-                    android:textSize="18sp"
-                    />
+                    android:textSize="18sp" />
             </LinearLayout>
 
             <!-- Tamanho -->
@@ -120,9 +121,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
+                    android:fontFamily="@font/montserrat"
                     android:text="48cm"
-                    android:textSize="18sp"
-                    />
+                    android:textSize="18sp" />
             </LinearLayout>
 
             <!-- Peso -->
@@ -145,6 +146,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
+                    android:fontFamily="@font/montserrat"
                     android:text="12kg"
                     android:textSize="18sp" />
 
@@ -170,6 +172,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
+                    android:fontFamily="@font/montserrat"
                     android:text="12kg"
                     android:textSize="18sp" />
 
@@ -196,6 +199,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
+                    android:fontFamily="@font/montserrat"
                     android:text="12kg"
                     android:textSize="18sp" />
 
@@ -221,6 +225,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
+                    android:fontFamily="@font/montserrat"
                     android:text="12kg"
                     android:textSize="18sp" />
 

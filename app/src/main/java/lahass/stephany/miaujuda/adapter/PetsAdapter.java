@@ -65,6 +65,7 @@ public class PetsAdapter extends RecyclerView.Adapter<PetsAdapter.MyViewHolder> 
 
         v.setOnClickListener(view -> {
             Context context = view.getContext();
+
             Intent intent = new Intent(context, InfoPetActivity.class);
             context.startActivity(intent);
         });
