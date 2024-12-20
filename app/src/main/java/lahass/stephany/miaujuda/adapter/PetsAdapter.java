@@ -69,6 +69,24 @@ public class PetsAdapter extends RecyclerView.Adapter<PetsAdapter.MyViewHolder> 
             context.startActivity(intent);
         });
 
+        v.setOnClickListener(view -> {
+            Context context = view.getContext();
+            Intent intent = new Intent(context, InfoPetActivity.class);
+
+            // Adicione os dados do pet selecionado ao Intent
+            intent.putExtra("nome", pet.nome);
+            intent.putExtra("localizacao", pet.localizacao);
+            intent.putExtra("foto", pet.foto);
+            intent.putExtra("tipo", pet.tipo);
+            intent.putExtra("raca", pet.raca);
+            intent.putExtra("tamanho", pet.tamanho);
+            intent.putExtra("peso", pet.peso);
+            intent.putExtra("sexo", pet.sexo);
+
+
+            context.startActivity(intent);
+        });
+
     }
 
     // Método para obter o número total de itens na lista
