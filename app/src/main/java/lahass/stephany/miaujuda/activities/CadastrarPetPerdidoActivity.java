@@ -2,8 +2,11 @@ package lahass.stephany.miaujuda.activities;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -25,7 +28,38 @@ public class CadastrarPetPerdidoActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+
         });
+
+        // Encontra o Spinner no layout
+        Spinner spinner = findViewById(R.id.spinnerTipo);
+
+        // Cria um ArrayAdapter usando o array de strings e o layout padrão do Spinner
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+                this,
+                R.array.tipo_animal,  // Array de opções definido no strings.xml
+                android.R.layout.simple_spinner_item
+        );
+
+        // Define o layout usado para exibir os itens da lista suspensa
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // Aplica o adapter ao Spinner
+        spinner.setAdapter(adapter);
+
+        // Captura o item selecionado
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String itemSelecionado = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Caso nenhum item seja selecionado
+            }
+        });
+
 
         // Quando o usuário clicar no bptão cadastrar
         Button btnCadastrarPetp =  findViewById(R.id.btnCadastrarPetP);

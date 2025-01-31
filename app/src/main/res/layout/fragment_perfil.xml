@@ -62,7 +62,7 @@
                     android:layout_marginStart="70dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="70dp"
-                    tools:srcCompat="@drawable/bonitinha" />
+                    tools:srcCompat="@tools:sample/avatars" />
 
                 <TextView
                     android:layout_width="wrap_content"

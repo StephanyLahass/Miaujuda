@@ -53,12 +53,11 @@
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
-                android:layout_marginRight="60dp"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:srcCompat="@android:color/darker_gray" />
 
             <Button
                 android:id="@+id/btnSimg_cadAnAd"
@@ -114,19 +113,16 @@
 
             </RadioGroup>
 
-            <EditText
-                android:id="@+id/etTipo_cadAnAd"
+            <Spinner
+                android:id="@+id/spinnerTipo2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="8dp"
                 android:background="@drawable/bg_edit_text"
-                android:ems="10"
-                android:fontFamily="@font/montserrat"
-                android:hint="Tipo do Animal"
-                android:inputType="text"
-                android:textSize="16sp" />
+                android:fontFamily="@font/montserrat" />
 
             <EditText
                 android:id="@+id/etP_cadAdAn"
@@ -134,7 +130,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="8dp"
                 android:background="@drawable/bg_edit_text"
                 android:ems="10"
                 android:fontFamily="@font/montserrat"
@@ -148,7 +144,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="8dp"
                 android:background="@drawable/bg_edit_text"
                 android:ems="10"
                 android:fontFamily="@font/montserrat"
@@ -162,7 +158,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="8dp"
                 android:background="@drawable/bg_edit_text"
                 android:ems="10"
                 android:fontFamily="@font/montserrat"
@@ -190,7 +186,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginRight="60dp"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/bg_bt_laranja"

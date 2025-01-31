@@ -2,8 +2,11 @@ package lahass.stephany.miaujuda.activities;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -27,6 +30,35 @@ public class CadastrarPetActivity extends AppCompatActivity {
             return insets;
         });
 
+        // Encontra o Spinner no layout
+        Spinner spinner = findViewById(R.id.spinnerTipo2);
+
+        // Cria um ArrayAdapter usando o array de strings e o layout padrão do Spinner
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+                this,
+                R.array.tipo_animal,  // Array de opções definido no strings.xml
+                android.R.layout.simple_spinner_item
+        );
+
+        // Define o layout usado para exibir os itens da lista suspensa
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // Aplica o adapter ao Spinner
+        spinner.setAdapter(adapter);
+
+        // Captura o item selecionado
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String itemSelecionado = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Caso nenhum item seja selecionado
+            }
+        });
+
         // Quando o usuário clicar no bptão cadastrar
         Button btnCadPet =  findViewById(R.id.btn_cadAnAd);
         btnCadPet.setOnClickListener(new View.OnClickListener() {
@@ -42,13 +74,6 @@ public class CadastrarPetActivity extends AppCompatActivity {
                 final String NomeAnimal = etNome_cadAnAd.getText().toString();
                 if(NomeAnimal.isEmpty()) {
                     Toast.makeText(CadastrarPetActivity.this, "Campo de nome do pet não preenchido", Toast.LENGTH_LONG).show();
-                    return;
-                }
-
-                EditText etTipo_cadAnAd =  findViewById(R.id.etTipo_cadAnAd);
-                final String TipoAnimal = etTipo_cadAnAd.getText().toString();
-                if(TipoAnimal.isEmpty()) {
-                    Toast.makeText(CadastrarPetActivity.this, "Campo de tipo do animal não preenchido", Toast.LENGTH_LONG).show();
                     return;
                 }
 
